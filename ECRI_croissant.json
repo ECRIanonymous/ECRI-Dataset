@@ -1,0 +1,1088 @@
+{
+  "@context": {
+    "@language": "en",
+    "@vocab": "https://schema.org/",
+    "citeAs": "cr:citeAs",
+    "column": "cr:column",
+    "conformsTo": "dct:conformsTo",
+    "cr": "http://mlcommons.org/croissant/",
+    "rai": "http://mlcommons.org/croissant/RAI/",
+    "data": {
+      "@id": "cr:data",
+      "@type": "@json"
+    },
+    "dataType": {
+      "@id": "cr:dataType",
+      "@type": "@vocab"
+    },
+    "dct": "http://purl.org/dc/terms/",
+    "examples": {
+      "@id": "cr:examples",
+      "@type": "@json"
+    },
+    "extract": "cr:extract",
+    "field": "cr:field",
+    "fileProperty": "cr:fileProperty",
+    "fileObject": "cr:fileObject",
+    "fileSet": "cr:fileSet",
+    "format": "cr:format",
+    "includes": "cr:includes",
+    "isLiveDataset": "cr:isLiveDataset",
+    "jsonPath": "cr:jsonPath",
+    "key": "cr:key",
+    "md5": "cr:md5",
+    "parentField": "cr:parentField",
+    "path": "cr:path",
+    "recordSet": "cr:recordSet",
+    "references": "cr:references",
+    "regex": "cr:regex",
+    "repeated": "cr:repeated",
+    "replace": "cr:replace",
+    "sc": "https://schema.org/",
+    "separator": "cr:separator",
+    "source": "cr:source",
+    "subField": "cr:subField",
+    "transform": "cr:transform"
+  },
+  "@type": "sc:Dataset",
+  "name": "ECRI",
+  "description": "The Enhanced Core Reading Instruction (ECRI) dataset is an extensive longitudinal tabular dataset collected from 44 schools, encompassing 6,916 students and 172 teachers. Our study utilizes this dataset to assess how advanced machine learning models perform in identifying early childhood educational patterns.",
+  "conformsTo": "http://mlcommons.org/croissant/1.0",
+  "citeAs": "Anonymous Author. Scalable Early Childhood Reading Performance Prediction. NeurIPS, under review.",
+  "distribution": [
+    {
+      "@type": "cr:FileObject",
+      "@id": "ECRI-github",
+      "name": "ECRI-github",
+      "description": "ECRI is hosted in a repository on GitHub.",
+      "contentUrl": "https://github.com/ECRIanonymous/ECRI-Dataset",
+      "encodingFormat": "git+https",
+      "sha256": "main"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "ECRIDataSet.csv",
+      "name": "ECRIDataSet-csv",
+      "description": "The ECRI data used for training machine learning models.",
+      "containedIn": {
+        "@id": "ECRI-github"
+      },
+      "contentUrl": "data/ECRIDataSet.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "1883c5796132cfb524cf691d9dc0461ad535239c0cfb720efa0da4c1254e58fc"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "ECRIRawData.csv",
+      "name": "ECRIRawData-csv",
+      "description": "Raw ECRI data without processing.",
+      "containedIn": {
+        "@id": "ECRI-github"
+      },
+      "contentUrl": "data/ECRIRawData.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "0d1b85c378409df2f9e37ce74e4636746d5be3890a4689c3d88ed588d0408f19"
+    },
+    {
+      "@type": "cr:FileObject",
+      "@id": "MetaData.csv",
+      "name": "MetaData-csv",
+      "description": "The ECRI metadata displays school-level statistics.",
+      "containedIn": {
+        "@id": "ECRI-github"
+      },
+      "contentUrl": "data/MetaData.csv",
+      "encodingFormat": "text/csv",
+      "sha256": "9df68c73eafbb253add213a505209551d04b41ed6b56fe16969e1dacd2a29627"
+    }
+  ],
+  "recordSet": [
+    {
+      "@type": "cr:RecordSet",
+      "@id": "data",
+      "name": "data",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "data/StuID",
+          "name": "StuID",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "StuID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/Gender",
+          "name": "Gender",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "Gender"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/Tier",
+          "name": "Tier",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "Tier"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/SchlID",
+          "name": "SchlID",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "SchlID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/TeachID",
+          "name": "TeachID",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "TeachID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/LEP",
+          "name": "LEP",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "LEP"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/SpEd",
+          "name": "SpEd",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "SpEd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/Tx",
+          "name": "Tx",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "Tx"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/Cohort",
+          "name": "Cohort",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "Cohort"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/Keep",
+          "name": "Keep",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "Keep"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/Age1b",
+          "name": "Age1b",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "Age1b"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/Tier2_N",
+          "name": "Tier2_N",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "Tier2_N"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/grp_rate",
+          "name": "grp_rate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "grp_rate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/rcmistot",
+          "name": "rcmistot",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "rcmistot"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/gnrl_fid",
+          "name": "gnrl_fid",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "gnrl_fid"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/TKPctCrct",
+          "name": "TKPctCrct",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "TKPctCrct"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/Tier2MinRd",
+          "name": "Tier2MinRd",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "Tier2MinRd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/TYearsTeaching",
+          "name": "TYearsTeaching",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "TYearsTeaching"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/Time",
+          "name": "Time",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "Time"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/t",
+          "name": "t",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "t"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/NWFcls",
+          "name": "NWFcls",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "NWFcls"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/NWFwrc",
+          "name": "NWFwrc",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "NWFwrc"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/ORFwc",
+          "name": "ORFwc",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "ORFwc"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/SAwrS",
+          "name": "SAwrS",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "SAwrS"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/SAsrS",
+          "name": "SAsrS",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "SAsrS"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/SAtoS",
+          "name": "SAtoS",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "SAtoS"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/RMwidRS",
+          "name": "RMwidRS",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "RMwidRS"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/RMwdaRS",
+          "name": "RMwdaRS",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "RMwdaRS"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/RMwidRS_target",
+          "name": "RMwidRS_target",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "RMwidRS_target"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "data/RMwdaRS_target",
+          "name": "RMwdaRS_target",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIDataSet.csv"
+            },
+            "extract": {
+              "column": "RMwdaRS_target"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "rawdata",
+      "name": "rawdata",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/StuID",
+          "name": "StuID",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "StuID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/Gender",
+          "name": "Gender",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "Gender"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/Tier",
+          "name": "Tier",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "Tier"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/SchlID",
+          "name": "SchlID",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "SchlID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/TeachID",
+          "name": "TeachID",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "TeachID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/LEP",
+          "name": "LEP",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "LEP"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/SpEd",
+          "name": "SpEd",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "SpEd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/Tx",
+          "name": "Tx",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "Tx"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/Cohort",
+          "name": "Cohort",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "Cohort"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/Keep",
+          "name": "Keep",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "Keep"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/Age1b",
+          "name": "Age1b",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "Age1b"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/Tier2_N",
+          "name": "Tier2_N",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "Tier2_N"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/grp_rate",
+          "name": "grp_rate",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "grp_rate"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/rcmistot",
+          "name": "rcmistot",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "rcmistot"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/gnrl_fid",
+          "name": "gnrl_fid",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "gnrl_fid"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/TKPctCrct",
+          "name": "TKPctCrct",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "TKPctCrct"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/Tier2MinRd",
+          "name": "Tier2MinRd",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "Tier2MinRd"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/TYearsTeaching",
+          "name": "TYearsTeaching",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "TYearsTeaching"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/Time",
+          "name": "Time",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "Time"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/t",
+          "name": "t",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "t"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/NWFcls",
+          "name": "NWFcls",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "NWFcls"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/NWFwrc",
+          "name": "NWFwrc",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "NWFwrc"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/ORFwc",
+          "name": "ORFwc",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "ORFwc"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/SAwsS",
+          "name": "SAwsS",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "SAwsS"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/SAwrS",
+          "name": "SAwrS",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "SAwrS"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/SAsrS",
+          "name": "SAsrS",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "SAsrS"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/SArcS",
+          "name": "SArcS",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "SArcS"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/SAtoS",
+          "name": "SAtoS",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "SAtoS"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/RMwidRS",
+          "name": "RMwidRS",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "RMwidRS"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "rawdata/RMwdaRS",
+          "name": "RMwdaRS",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "ECRIRawData.csv"
+            },
+            "extract": {
+              "column": "RMwdaRS"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@type": "cr:RecordSet",
+      "@id": "metadata",
+      "name": "metadata",
+      "field": [
+        {
+          "@type": "cr:Field",
+          "@id": "metadata/SchoolID",
+          "name": "SchoolID",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "MetaData.csv"
+            },
+            "extract": {
+              "column": "SchoolID"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "metadata/FreeLunch",
+          "name": "FreeLunch",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "MetaData.csv"
+            },
+            "extract": {
+              "column": "FreeLunch"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "metadata/AmericanIndian",
+          "name": "AmericanIndian",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "MetaData.csv"
+            },
+            "extract": {
+              "column": "AmericanIndian"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "metadata/Asian",
+          "name": "Asian",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "MetaData.csv"
+            },
+            "extract": {
+              "column": "Asian"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "metadata/Hispanic",
+          "name": "Hispanic",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "MetaData.csv"
+            },
+            "extract": {
+              "column": "Hispanic"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "metadata/AfricanAmerican",
+          "name": "AfricanAmerican",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "MetaData.csv"
+            },
+            "extract": {
+              "column": "AfricanAmerican"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "metadata/White",
+          "name": "White",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "MetaData.csv"
+            },
+            "extract": {
+              "column": "White"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "metadata/NativeHawaiian",
+          "name": "NativeHawaiian",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "MetaData.csv"
+            },
+            "extract": {
+              "column": "NativeHawaiian"
+            }
+          }
+        },
+        {
+          "@type": "cr:Field",
+          "@id": "metadata/MoreRaces",
+          "name": "MoreRaces",
+          "dataType": "sc:Text",
+          "source": {
+            "fileObject": {
+              "@id": "MetaData.csv"
+            },
+            "extract": {
+              "column": "MoreRaces"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
