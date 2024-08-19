@@ -10,10 +10,10 @@
 This repository contains the data and code associated with the paper **"Scalable Early Childhood Reading Performance Prediction"**. The research focuses on leveraging machine learning models to predict early childhood reading performance, which can empower educators to identify at-risk students and provide early, tailored interventions. The study introduces the **Enhanced Core Reading Instruction (ECRI) dataset**, a large-scale, longitudinal dataset collected from 44 schools involving 6,916 students and 172 teachers.
 
 ## Dataset
-<p>
-    <img alt="Example 1" src="assets/school-level-fe.png" class="fit"/>
-</p>  
-Visulization of School-level Features. Left: the percentage of schools providing free or reduced-price lunch. Right: student demographics, averaged over schools.
+
+![Visulization of School-level Features. Left: the percentage of schools providing free or reduced-price lunch. Right: student demographics, averaged over schools.
+](assets/school-level-fe.png "Visulization of School-level Features. Left: the percentage of schools providing free or reduced-price lunch. Right: student demographics, averaged over schools.
+")
 
 ### Enhanced Core Reading Instruction (ECRI) Dataset
 
