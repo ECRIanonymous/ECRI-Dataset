@@ -63,6 +63,20 @@ The ECRI dataset is a  longitudinal dataset specifically designed for modeling a
 </figure>
 
 <div style="display: flex; justify-content: space-between; align-items: center;">
+
+  <figure style="text-align: center; margin-right: 20px;">
+    <img src="assets/maskmlp.png" alt="Left Image" style="width: 45%; height: auto;">
+    <figcaption>Caption for the left image.</figcaption>
+  </figure>
+  
+  <figure style="text-align: center; margin-left: 20px;">
+    <img src="assets/xgb.png" alt="Right Image" style="width: 45%; height: auto;">
+    <figcaption>Caption for the right image.</figcaption>
+  </figure>
+
+</div>
+
+<div style="display: flex; justify-content: space-between; align-items: center;">
   <figure style="text-align: center; margin-right: 20px;">
     <img
       src="assets/maskmlp.png"
