@@ -47,6 +47,19 @@ The ECRI dataset is a  longitudinal dataset specifically designed for modeling a
 | `RMwdaRS`                    | Score on Word Attack for Woodcock Reading Mastery Test.                                     |
 
 ## Model and Results
+<figure>
+  <img
+  src="assets/model.png"
+  alt="Self-Suerpvised MLP Pre-Training.">
+  <figcaption>Visulization of our model. We randomly mask parts of the input variables, i.e., as missing values, and train the model using a loss derived from both the original and masked input to a common feature extractor (we employ a cosine embedding loss to enforce similarity among the two embeddings).</figcaption>
+</figure>
+
+<figure>
+  <img
+  src="assets/tsne.png"
+  alt="Visualization of t-SNE-based Embedding and Student Profile Analysis.">
+  <figcaption>Visualization of t-SNE-based Embedding and Student Profile Analysis. The visualization uses embeddings derived from the MLP (left) and MaskMLP (right) models for the word identification task, with negative samples shaded in gray and positive samples shaded in green. The pre-training step in MaskMLP results in an embedding with greater separation among student profiles.</figcaption>
+</figure>
 
 
 
