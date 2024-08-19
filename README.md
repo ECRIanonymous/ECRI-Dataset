@@ -11,9 +11,7 @@ This repository contains the data and code associated with the paper **"Scalable
 
 ## Dataset
 
-![Visulization of School-level Features. Left: the percentage of schools providing free or reduced-price lunch. Right: student demographics, averaged over schools.
-](assets/school-level-fe.png "Visulization of School-level Features. Left: the percentage of schools providing free or reduced-price lunch. Right: student demographics, averaged over schools.
-")
+![Visulization of School-level Features. Left: the percentage of schools providing free or reduced-price lunch. Right: student demographics, averaged over schools.](assets/school-level-fe.png "Visulization of School-level Features. Left: the percentage of schools providing free or reduced-price lunch. Right: student demographics, averaged over schools.")
 
 ### Enhanced Core Reading Instruction (ECRI) Dataset
 
