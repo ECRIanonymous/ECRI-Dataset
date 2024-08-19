@@ -47,7 +47,7 @@ The ECRI dataset is a  longitudinal dataset specifically designed for modeling a
 | `RMwdaRS`                    | Score on Word Attack for Woodcock Reading Mastery Test.                                     |
 
 ## Model and Results
-<figure>
+<figure style="text-align: center;">
   <img
   src="assets/model.png"
   alt="Self-Suerpvised MLP Pre-Training.">
