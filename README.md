@@ -22,9 +22,9 @@ This repository contains the data and code associated with the paper **"Scalable
 
 The ECRI dataset is a  longitudinal dataset specifically designed for modeling and predicting future reading performance in early childhood education. The dataset includes:
 
-- **Demographic Data**: Includes student-level information such as special education status, gender, and English proficiency.
+- **Demographic Data**: Includes student-level information such as special education status, gender, and age.
 - **Assessment Data**: Includes various reading assessments, such as Dynamic Indicators of Basic Early Literacy Skills (DIBELS), Stanford Achievement Test, and Woodcock Reading Mastery Test.
-- **Intervention Data**: Records the intervention provided to students identified as at-risk for reading difficulties, including details on instructional strategies employed under the ECRI framework.
+- **Intervention Data**: Records the intervention provided to students identified as at-risk for reading difficulties.
 
 ## License
 Our work is licensed under a [Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License][cc-by-nc-sa].  
