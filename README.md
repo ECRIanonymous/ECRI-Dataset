@@ -62,37 +62,14 @@ The ECRI dataset is a  longitudinal dataset specifically designed for modeling a
   <figcaption>Visualization of t-SNE-based Embedding and Student Profile Analysis. The visualization uses embeddings derived from the MLP (left) and MaskMLP (right) models for the word identification task, with negative samples shaded in gray and positive samples shaded in green. The pre-training step in MaskMLP results in an embedding with greater separation among student profiles.</figcaption>
 </figure>
 
-<div style="display: flex; justify-content: space-between; align-items: center;">
+<figure>
+  <img
+  src="assets/feimportance.png"
+  alt="Feature importance.">
+  <figcaption>Visulization of Feature Importance on Word Identification Task. Left: feature importance of MaskMLP; Right: feature importance of XGBoost.</figcaption>
+</figure>
 
-  <figure style="text-align: center; margin-right: 20px;">
-    <img src="assets/maskmlp.png" alt="Left Image" style="width: 45%; height: auto;">
-    <figcaption>Caption for the left image.</figcaption>
-  </figure>
-  
-  <figure style="text-align: center; margin-left: 20px;">
-    <img src="assets/xgb.png" alt="Right Image" style="width: 45%; height: auto;">
-    <figcaption>Caption for the right image.</figcaption>
-  </figure>
 
-</div>
-
-<div style="display: flex; justify-content: space-between; align-items: center;">
-  <figure style="text-align: center; margin-right: 20px;">
-    <img
-      src="assets/maskmlp.png"
-      alt="MaskMLP"
-      style="max-width: 40%; height: auto;">
-    <figcaption>Feature Importance Analysis of MaskMLP.</figcaption>
-  </figure>
-  
-  <figure style="text-align: center; margin-left: 20px;">
-    <img
-      src="assets/xgb.png"
-      alt="XGBoost"
-      style="max-width: 40%; height: auto;">
-    <figcaption>Feature Importance Analysis of XGBoost.</figcaption>
-  </figure>
-</div>
 
 
 ## License
