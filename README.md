@@ -48,14 +48,13 @@ The ECRI dataset is a  longitudinal dataset specifically designed for modeling a
 
 ## Model and Results
 <div align=center>
-<figure style="display: flex; flex-direction: column; align-items: center;">
+<figure>
   <img
   src="assets/model.png"
-  alt="Self-Suerpvised MLP Pre-Training."
-  style="max-width: 100%; height: auto;">
-  <figcaption>Visulization of our model. We randomly mask parts of the input variables, i.e., as missing values, and train the model using a loss derived from both the original and masked input to a common feature extractor (we employ a cosine embedding loss to enforce similarity among the two embeddings).</figcaption>
+  alt="Self-Suerpvised MLP Pre-Training.">
 </figure>
 </div>
+Visulization of our model. We randomly mask parts of the input variables, i.e., as missing values, and train the model using a loss derived from both the original and masked input to a common feature extractor (we employ a cosine embedding loss to enforce similarity among the two embeddings)
 
 <figure>
   <img
