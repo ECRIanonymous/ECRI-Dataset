@@ -67,7 +67,7 @@ The ECRI dataset is a  longitudinal dataset specifically designed for modeling a
     <img
       src="assets/maskmlp.png"
       alt="MaskMLP"
-      style="max-width: 100%; height: auto;">
+      style="max-width: 40%; height: auto;">
     <figcaption>Feature Importance Analysis of MaskMLP.</figcaption>
   </figure>
   
@@ -75,7 +75,7 @@ The ECRI dataset is a  longitudinal dataset specifically designed for modeling a
     <img
       src="assets/xgb.png"
       alt="XGBoost"
-      style="max-width: 100%; height: auto;">
+      style="max-width: 40%; height: auto;">
     <figcaption>Feature Importance Analysis of XGBoost.</figcaption>
   </figure>
 </div>
