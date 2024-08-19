@@ -47,6 +47,7 @@ The ECRI dataset is a  longitudinal dataset specifically designed for modeling a
 | `RMwdaRS`                    | Score on Word Attack for Woodcock Reading Mastery Test.                                     |
 
 ## Model and Results
+<div align=center>
 <figure style="display: flex; flex-direction: column; align-items: center;">
   <img
   src="assets/model.png"
@@ -54,6 +55,7 @@ The ECRI dataset is a  longitudinal dataset specifically designed for modeling a
   style="max-width: 100%; height: auto;">
   <figcaption>Visulization of our model. We randomly mask parts of the input variables, i.e., as missing values, and train the model using a loss derived from both the original and masked input to a common feature extractor (we employ a cosine embedding loss to enforce similarity among the two embeddings).</figcaption>
 </figure>
+</div>
 
 <figure>
   <img
